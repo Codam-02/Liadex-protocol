@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\damco\\Desktop\\liadex_protocol\\contracts\\LiadexLiquidityToken.sol": {
-      "lastModificationDate": 1717137547220,
-      "contentHash": "40c7fd85a2e2aefc9a514760d99b6aa7",
+      "lastModificationDate": 1718029294693,
+      "contentHash": "0ce8a5d60f4d51b2628d19791ac8a4c3",
       "sourceName": "contracts/LiadexLiquidityToken.sol",
       "solcConfig": {
         "version": "0.8.20",
@@ -266,8 +266,8 @@
       ]
     },
     "C:\\Users\\damco\\Desktop\\liadex_protocol\\contracts\\TradingPair.sol": {
-      "lastModificationDate": 1717925491466,
-      "contentHash": "a7346f01cb0e432c2a35ab575f3cd32d",
+      "lastModificationDate": 1718037789614,
+      "contentHash": "f15e35ec45fd393604ff90a6b052a265",
       "sourceName": "contracts/TradingPair.sol",
       "solcConfig": {
         "version": "0.8.20",
@@ -306,8 +306,8 @@
       ]
     },
     "C:\\Users\\damco\\Desktop\\liadex_protocol\\interfaces\\ITradingPair.sol": {
-      "lastModificationDate": 1716992944894,
-      "contentHash": "536e0a57ca869f61bb7848b24a0a0b0e",
+      "lastModificationDate": 1718029294704,
+      "contentHash": "4a8d598911023423d9df38cd0ff1d314",
       "sourceName": "interfaces/ITradingPair.sol",
       "solcConfig": {
         "version": "0.8.20",
@@ -380,8 +380,8 @@
       ]
     },
     "C:\\Users\\damco\\Desktop\\liadex_protocol\\contracts\\WrappedEther.sol": {
-      "lastModificationDate": 1717051198386,
-      "contentHash": "7c302fee1185c654b56e5e4c56562aa8",
+      "lastModificationDate": 1718029294696,
+      "contentHash": "6919d94690d1fcdd0d86bdf331ed5ce6",
       "sourceName": "contracts/WrappedEther.sol",
       "solcConfig": {
         "version": "0.8.20",
@@ -419,8 +419,8 @@
       ]
     },
     "C:\\Users\\damco\\Desktop\\liadex_protocol\\contracts\\LiadexERC20.sol": {
-      "lastModificationDate": 1717160273151,
-      "contentHash": "01527838cb757df48872823e0c286dc2",
+      "lastModificationDate": 1718029294690,
+      "contentHash": "6e2a7b129cf704c7cb49d5637e4f71f3",
       "sourceName": "contracts/LiadexERC20.sol",
       "solcConfig": {
         "version": "0.8.20",
