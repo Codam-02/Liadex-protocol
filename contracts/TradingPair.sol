@@ -25,6 +25,10 @@ contract TradingPair is LiadexLiquidityToken, ITradingPair {
     uint256 private _reserveB = 0;
     uint256 private _k; //this value represents the ratio between the two token reserves
 
+    /*
+    constructor takes as arguments two distinct ERC20 contract addresses, which one is tokenA
+    or tokenB makes no difference at all, it's just for distinction
+    */
     constructor (address tokenA, address tokenB) {
         _tokenA = tokenA;
         _tokenB = tokenB;
