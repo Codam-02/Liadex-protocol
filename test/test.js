@@ -26,16 +26,15 @@ describe("Ether wrapper contract tests", function() {
         expect(await weth.balanceOf(signer1)).to.equal(ethers.parseEther("0.4"));
     });
 
-    /*
     it ("attempting to unwrap a WETH amount that exceeds balance should result in a reverted transaction", async function() {
         const { weth , signer1 } = await loadFixture(wrapperFixture);
         
         await expect(weth.connect(signer1).unwrap(1)).to.be.revertedWith("Insufficient WETH balance");
     });
-    */
 });
 
-/*
+//--------------------------------------------------------------------------
+
 describe("ERC20 contract tests", function() {
 
     async function ERC20Fixture() {
@@ -64,8 +63,8 @@ describe("ERC20 contract tests", function() {
     });
 
 });
-*/
 
+//--------------------------------------------------------------------------
 
 describe("Trading pair contract tests", function() {
 
