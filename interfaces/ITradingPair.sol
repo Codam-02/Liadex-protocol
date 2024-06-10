@@ -5,6 +5,7 @@ interface ITradingPair {
 
         function swap(uint256, uint256) external;
         function addLiquidity(uint256, uint256) external;
+        function withdraw(uint256, uint256) external;
         function getTokenA() external view returns (address);
         function getTokenB() external view returns (address);
         function getReserves() external view returns (uint256, uint256);

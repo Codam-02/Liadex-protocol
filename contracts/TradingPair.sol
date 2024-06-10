@@ -77,7 +77,7 @@ contract TradingPair is LiadexLiquidityToken, ITradingPair {
         else {
 
             bool equalValue = calculateTokenAEquivalent(amountB) == amountA || calculateTokenBEquivalent(amountA) == amountB;
-            require(equalValue, "Token amounts provided are not of equal value.");
+            require(equalValue, "Token amounts provided are not of equal value."); //require that token amounts are of the same value
             
             IERC20(_tokenA).transferFrom(address(msg.sender), address(this), amountA);
             IERC20(_tokenB).transferFrom(address(msg.sender), address(this), amountB);
@@ -94,7 +94,7 @@ contract TradingPair is LiadexLiquidityToken, ITradingPair {
         require (amountA > 0 && amountB > 0, "Withdraw amounts can't be 0.");
 
         bool equalValue = calculateTokenAEquivalent(amountB) == amountA || calculateTokenBEquivalent(amountA) == amountB;
-        require(equalValue, "Token withdraw amounts are not of equal value.");
+        require(equalValue, "Token withdraw amounts are not of equal value."); //require that token amounts are of the same value
 
         uint256 liquidityTokenToBurn = amountA.mul(totalSupply()).div(_reserveA);
         require(balanceOf(address(msg.sender)) >= liquidityTokenToBurn, "User doesn't own enough liquidity pool funds.");
@@ -109,6 +109,11 @@ contract TradingPair is LiadexLiquidityToken, ITradingPair {
         sync();
     }
 
+    /*
+    This is the function that lets users swap one of the liquidity pool's assets for the other. The argument
+    amount greater than zero is the token that the user is giving to the pool. The function then calculates its
+    value and sends to the user an amount of the other token that's of equal value as the token the user sent.
+    */
     function swap(uint256 tokenAAmount, uint256 tokenBAmount) external {
         require (tokenAAmount > 0 ? tokenBAmount == 0 : tokenBAmount > 0, "Swap failed.");
         if (tokenAAmount > 0) {
