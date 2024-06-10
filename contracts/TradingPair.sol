@@ -5,6 +5,12 @@ import "contracts/LiadexLiquidityToken.sol";
 import "libraries/SafeMath.sol";
 import "interfaces/ITradingPair.sol";
 
+/*
+    This contract is automated-market-maker based liquidity pool that can be initialized via constructor
+    on any two distinct ERC20-token contracts and lets users add liquidity to the pool, remove it, or swap
+    one of the two ERC20s for the other. Anyone intending to use this code should first make sure they
+    understand the implemented contracts, interfaces and libraries and the following code itself.
+*/
 contract TradingPair is LiadexLiquidityToken, ITradingPair {
 
     event Swap(address tokenSwapped, address tokenObtained, uint256 amountSwapped, uint256 amountObtained);
@@ -17,8 +23,7 @@ contract TradingPair is LiadexLiquidityToken, ITradingPair {
     address public immutable _tokenB;
     uint256 private _reserveA = 0;
     uint256 private _reserveB = 0;
-    uint256 private _k;
-    //bytes4 private constant SELECTOR = bytes4(keccak256(bytes('transfer(address,uint256)')));
+    uint256 private _k; //this value represents the ratio between the two token reserves
 
     constructor (address tokenA, address tokenB) {
         _tokenA = tokenA;
@@ -58,6 +63,9 @@ contract TradingPair is LiadexLiquidityToken, ITradingPair {
     function addLiquidity(uint256 amountA, uint256 amountB) external {
         require (amountA > 0 && amountB > 0, "Deposit amounts can't be 0.");
 
+        /*
+        The following if statement handles the first liquidity provision of the liquidity pool
+        */
         if (totalSupply() == 0) {
             
             IERC20(_tokenA).transferFrom(address(msg.sender), address(this), amountA);
