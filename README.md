@@ -1,13 +1,20 @@
-# Sample Hardhat Project
+# Liadex protocol
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+This project is a network of smart contracts for an automated-market-maker based decentralized exchange.
+All the contracts have already been deployed on Ethereum Sepolia testnet and users can interact with them
+on this website: //.
 
-Try running some of the following tasks:
+## test/test.js
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
+This file is a script that runs tests for the correct functioning of all smart contracts in this project.
+The testing environment is hre (Hardhat Runtime Environment), and libraries implemented are 'chai' and 'mocha'.
+To run these tests, use this command in the project directory: 
+`npx hardhat test`
+
+## scripts/deploy.js
+
+This file is a script that deploys a new copy of the protocol on Ethereum Sepolia testnet, using Ethers.js.
+To run this file, use this command in the project directory: 
+`npx hardhat run scripts/deploy.js --network sepolia`
+
+
