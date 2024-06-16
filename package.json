@@ -11,7 +11,7 @@
     "ethers": "^6.12.2",
     "gh-pages": "^6.1.1"
   },
-  "homepage": "https://Codam.02.github.io/Liadex-protocol",
+  "homepage": "https://Codam-02.github.io/Liadex-protocol",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
