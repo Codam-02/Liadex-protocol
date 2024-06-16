@@ -13,7 +13,7 @@
   },
   "homepage": "https://Codam-02.github.io/Liadex-protocol",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run-script build",
     "deploy": "gh-pages -d build"
   }
 }
