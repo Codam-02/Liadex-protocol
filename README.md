@@ -2,7 +2,7 @@
 
 This project is a network of smart contracts for an automated-market-maker based decentralized exchange.
 All the contracts have already been deployed on Ethereum Sepolia testnet and users can interact with them
-on this website: [Liadex Protocol](https://codam-02.github.io/Liadex-web-app/)
+on this website: [https://codam-02.github.io/Liadex-protocol/](https://codam-02.github.io/Liadex-protocol/)
 
 ## test/test.js
 
